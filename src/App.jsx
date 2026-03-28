@@ -389,9 +389,6 @@ export default function PSTBigTechPlatformMonopolyDashboard() {
           </div>
         )}
 
-          </div>
-        )}
-
         {/* THRESHOLDS TAB */}
         {tab === 'thresholds' && (
           <div>
