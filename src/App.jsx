@@ -12,8 +12,8 @@ import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, R
 const META = {
   title: "Big Tech Acquisitions and Platform Monopoly",
   subtitle: "System Welfare Cost of Gatekeeper Rent Extraction",
-  beta: "7.4",
-  ci: "5.8–9.2",
+  beta: "9.60",
+  ci: "7.36–12.40",
   pi: "$158B",
   psa: "−$832B",
   mu: "0.160",
@@ -69,23 +69,24 @@ const HIGHLIGHTS = [
         "EU DMA gatekeeper designations + DOJ Google victories + Australia NMBC = early game transformations. Structural remedies only path to meaningful β reduction.",
 ];
 
-const PSF_PARAMS = {pi_c:21.4,pi_p:158.0,w_c:790.0,kappa:0.91};
-const PSF_DATA = [{pi:2.14,w:775.71},{pi:10.27,w:785.23},{pi:18.4,w:789.65},{pi:26.53,w:788.99},{pi:34.66,w:783.23},{pi:42.79,w:772.37},{pi:50.92,w:756.43},{pi:59.05,w:735.39},{pi:67.18,w:709.25},{pi:75.31,w:678.03},{pi:83.44,w:641.71},{pi:91.57,w:600.3},{pi:99.7,w:553.79},{pi:107.84,w:502.13},{pi:115.97,w:445.43},{pi:124.1,w:383.64},{pi:132.23,w:316.76},{pi:140.36,w:244.78},{pi:148.49,w:167.71},{pi:156.62,w:85.55},{pi:164.75,w:-1.7},{pi:172.88,w:-94.05},{pi:181.01,w:-191.49},{pi:189.14,w:-294.03},{pi:197.27,w:-401.66},{pi:205.4,w:-514.38}];
+const PSF_PARAMS = {pi_c:35.0,pi_p:158.0,w_c:1169.0,kappa:1.22};
+const PSF_DATA = [{pi:3.5,w:1075.46},{pi:10.23,w:1111.16},{pi:16.96,w:1138.32},{pi:23.69,w:1156.94},{pi:30.42,w:1167.02},{pi:37.15,w:1168.56},{pi:43.88,w:1161.57},{pi:50.61,w:1146.03},{pi:57.34,w:1121.95},{pi:64.07,w:1089.34},{pi:70.8,w:1048.18},{pi:77.53,w:998.49},{pi:84.26,w:940.25},{pi:90.99,w:873.48},{pi:97.72,w:798.17},{pi:104.45,w:714.32},{pi:111.18,w:621.93},{pi:117.91,w:521.0},{pi:124.64,w:411.53},{pi:131.37,w:293.52},{pi:138.1,w:166.97},{pi:144.83,w:31.88},{pi:151.56,w:-111.75},{pi:158.29,w:-263.91},{pi:165.02,w:-424.62},{pi:171.75,w:-593.86},{pi:178.48,w:-771.65},{pi:185.21,w:-957.97},{pi:191.94,w:-1152.84},{pi:198.67,w:-1356.24},{pi:205.4,w:-1568.18}];
 
-const MC_PARAMS = {n_draws:10000,mean:7.4,ci_lo:5.1,ci_hi:11.2,pct_hw:98.6,channels:[{name:"Consumer attention extraction and data rents",dist:"log-normal",lo:2.8,hi:5.2},{name:"Publisher and creator surplus destruction",dist:"triangular",lo:1.2,hi:2.8},{name:"Innovation kill-zone effects",dist:"log-normal",lo:0.5,hi:1.6},{name:"Democratic discourse degradation",dist:"triangular",lo:0.3,hi:1.2}]};
-const MC_DATA = [{bin:"1.3",count:4},{bin:"1.9",count:14},{bin:"2.5",count:39},{bin:"3.2",count:93},{bin:"3.8",count:195},{bin:"4.5",count:361},{bin:"5.1",count:590},{bin:"5.8",count:852},{bin:"6.4",count:1089},{bin:"7.1",count:1231},{bin:"7.7",count:1231},{bin:"8.4",count:1089},{bin:"9.0",count:852},{bin:"9.7",count:590},{bin:"10.3",count:361},{bin:"11.0",count:195},{bin:"11.6",count:93},{bin:"12.3",count:39},{bin:"12.9",count:14},{bin:"13.5",count:4}];
+const MC_HIST = [{bin:"6.72",lo:6.7203,hi:6.8611,count:39},{bin:"6.86",lo:6.8611,hi:7.0019,count:68},{bin:"7.00",lo:7.0019,hi:7.1426,count:93},{bin:"7.14",lo:7.1426,hi:7.2834,count:153},{bin:"7.28",lo:7.2834,hi:7.4241,count:189},{bin:"7.42",lo:7.4241,hi:7.5649,count:211},{bin:"7.56",lo:7.5649,hi:7.7056,count:252},{bin:"7.71",lo:7.7056,hi:7.8464,count:275},{bin:"7.85",lo:7.8464,hi:7.9872,count:352},{bin:"7.99",lo:7.9872,hi:8.1279,count:330},{bin:"8.13",lo:8.1279,hi:8.2687,count:368},{bin:"8.27",lo:8.2687,hi:8.4094,count:331},{bin:"8.41",lo:8.4094,hi:8.5502,count:342},{bin:"8.55",lo:8.5502,hi:8.6909,count:337},{bin:"8.69",lo:8.6909,hi:8.8317,count:355},{bin:"8.83",lo:8.8317,hi:8.9725,count:340},{bin:"8.97",lo:8.9725,hi:9.1132,count:337},{bin:"9.11",lo:9.1132,hi:9.2540,count:279},{bin:"9.25",lo:9.2540,hi:9.3947,count:295},{bin:"9.39",lo:9.3947,hi:9.5355,count:286},{bin:"9.54",lo:9.5355,hi:9.6762,count:260},{bin:"9.68",lo:9.6762,hi:9.8170,count:272},{bin:"9.82",lo:9.8170,hi:9.9578,count:261},{bin:"9.96",lo:9.9578,hi:10.0985,count:283},{bin:"10.10",lo:10.0985,hi:10.2393,count:256},{bin:"10.24",lo:10.2393,hi:10.3800,count:261},{bin:"10.38",lo:10.3800,hi:10.5208,count:222},{bin:"10.52",lo:10.5208,hi:10.6615,count:213},{bin:"10.66",lo:10.6615,hi:10.8023,count:242},{bin:"10.80",lo:10.8023,hi:10.9431,count:229},{bin:"10.94",lo:10.9431,hi:11.0838,count:225},{bin:"11.08",lo:11.0838,hi:11.2246,count:197},{bin:"11.22",lo:11.2246,hi:11.3653,count:174},{bin:"11.37",lo:11.3653,hi:11.5061,count:200},{bin:"11.51",lo:11.5061,hi:11.6468,count:186},{bin:"11.65",lo:11.6468,hi:11.7876,count:147},{bin:"11.79",lo:11.7876,hi:11.9284,count:167},{bin:"11.93",lo:11.9284,hi:12.0691,count:156},{bin:"12.07",lo:12.0691,hi:12.2099,count:110},{bin:"12.21",lo:12.2099,hi:12.3506,count:113},{bin:"12.35",lo:12.3506,hi:12.4914,count:106},{bin:"12.49",lo:12.4914,hi:12.6321,count:76},{bin:"12.63",lo:12.6321,hi:12.7729,count:69},{bin:"12.77",lo:12.7729,hi:12.9137,count:55},{bin:"12.91",lo:12.9137,hi:13.0544,count:47},{bin:"13.05",lo:13.0544,hi:13.1952,count:46},{bin:"13.20",lo:13.1952,hi:13.3359,count:29},{bin:"13.34",lo:13.3359,hi:13.4767,count:27},{bin:"13.48",lo:13.4767,hi:13.6174,count:19},{bin:"13.62",lo:13.6174,hi:13.7582,count:20}];
+const MC_STATS = {mean:9.6042,median:9.3961,ci_lo:7.3621,ci_hi:12.3976,pct_hw:100.0,pct_above_3:100.0,pct_above_5:100.0,min:5.9472,max:15.2773,n_draws:10000,seed:42};
+const MC_CHANNELS = [{name:"Monopoly rent extraction",mean:396.97,p5:317.44,p50:395.40,p95:480.66,share:0.2635},{name:"Privacy & data exploit.",mean:384.05,p5:300.96,p50:380.45,p95:479.85,share:0.2549},{name:"Innovation suppression",mean:222.94,p5:152.06,p50:219.96,p95:300.36,share:0.1480},{name:"Labor market monopsony",mean:148.26,p5:101.71,p50:147.11,p95:197.34,share:0.0984},{name:"Attention & mental health",mean:284.50,p5:204.82,p50:278.53,p95:383.13,share:0.1888},{name:"Governance capture",mean:69.98,p5:34.18,p50:70.10,p95:105.81,share:0.0464}];
+const MC_WELFARE = {mean:1506.70,ci_lo:1333.95,ci_hi:1688.89};
 
-const THRESHOLDS = [{domain:"EU DMA gatekeeper designation",year:2024,status:"European Commission designated 6 gatekeepers (Alphabet, Amazon, Apple, ByteDance, Meta, Microsoft) under DMA, Mar 2024",confidence:"High",crossed:true},{domain:"US antitrust structural remedy",year:2027,status:"DOJ v. Google (search monopoly) ruled in DOJ favor Aug 2024; remedy phase ongoing. FTC v. Meta in discovery.",confidence:"Low",crossed:false},{domain:"Interoperability mandate",year:2028,status:"DMA Art. 7 mandates messaging interoperability; US ACCESS Act introduced but not passed",confidence:"Medium",crossed:false},{domain:"Data portability enforcement",year:2026,status:"GDPR Art. 20 data portability underenforced; DMA Art. 6(9) adds platform-specific requirements",confidence:"Medium",crossed:false}];
+const THRESHOLDS = [{domain:"EU DMA gatekeeper enforcement",year:2025,confidence:"High",status:"Apple, Google, Meta designated; interoperability mandates active",crossed:true},{domain:"U.S. antitrust structural remedy",year:2027,confidence:"Medium",status:"DOJ Google search remedy proceedings underway",crossed:false},{domain:"Platform data portability mandate",year:2028,confidence:"Medium",status:"EU DMA portability provisions; U.S. lacks federal equivalent",crossed:false},{domain:"AI integration lock-in threshold",year:2026,confidence:"High",status:"GPT-4/Gemini integration into search creating new switching barriers",crossed:true},{domain:"Global ad market >70% Big Tech share",year:2024,confidence:"High",status:"Google+Meta = ~68% of global digital ad spend in 2024",crossed:true}];
 
-const AXIOMS = {type:"institutional",items:[{id:"I1",name:"Network Effect Entrenchment",description:"Platforms exhibit demand-side economies of scale where user value scales with N² (Metcalfe); Google processes 8.5B searches/day (92% market share), Facebook has 3.07B MAUs — switching costs make contestability structurally impossible without interoperability mandates."},{id:"I2",name:"Acquisitive Moat Strategy",description:"GAFAM completed 900+ acquisitions 2000–2023 (FTC 2021 retrospective found 616 unreported); Instagram ($1B), WhatsApp ($19B), YouTube ($1.65B), Waze ($1.1B) eliminated nascent competitors before they reached scale."},{id:"I3",name:"Regulatory Jurisdiction Fragmentation",description:"Big Tech operates across 190+ jurisdictions; US, EU, UK, Japan, Korea, India each pursue different frameworks; firms exploit regulatory arbitrage while lobbying spend reached $70M in US alone (OpenSecrets 2023)."}]};
+const AXIOMS = {type:"institutional",items:[{id:"I1",name:"Network effects lock-in",description:"Platform value grows superlinearly with user base, creating winner-take-most dynamics that prevent competitive entry even when incumbents degrade quality or raise prices."},{id:"I2",name:"Data asymmetry moat",description:"Incumbents\' training data advantage for AI and behavioral targeting is self-reinforcing: more users generate more data, improving services, attracting more users."},{id:"I3",name:"Regulatory capture through complexity",description:"Platform governance requires technical expertise that regulators lack; the revolving door between Big Tech and regulatory agencies ensures that substantive enforcement is systematically understaffed."}]};
 
 const METHODS_DATA = {
-  welfare_function: "W = −[Attention_rents + Data_rents + Innovation_killzone + Content_creator_losses + Democratic_costs]. Attention rents estimated via Allcott et al. (2020) WTP experiments ($1,000/yr for Facebook, implying $3T in extracted attention value vs. ~$158B revenue, suggesting massive consumer-to-producer transfer).",
-  cooperative_baseline: "Interoperable, data-portable platform ecosystem where users own data and switching costs approach zero; cooperative Π_C = $21.4B reflects competitive-market margins (~5–8% vs. current 25–35% operating margins).",
-  falsification: ["If platform entry by viable competitors occurs without regulatory intervention (e.g., TikTok vs. Meta), contestability claim needs revision.","If DMA enforcement demonstrably reduces platform rents within 3 years, institutional failure is being corrected.","If Monte Carlo robustness for β_W > 1 falls below 80%, point estimate is unreliable.","If user welfare studies show net positive WTP exceeding social costs, β_W < 1."],
-  key_sources: ["FTC (2021). Non-HSR Reported Acquisitions by Select Technology Platforms. FTC Report.","DOJ v. Google LLC, Case No. 1:20-cv-03010 (D.D.C. 2024). Judge Mehta opinion.","Allcott, H. et al. (2020). The Welfare Effects of Social Media. AER 110(3).","Crémer, J., de Montjoye, Y-A., Schweitzer, H. (2019). Competition Policy for the Digital Era. EU Commission Report.","Stigler Center (2019). Stigler Committee on Digital Platforms. Final Report."]
+  welfare_function: "W measured as consumer surplus loss from monopoly pricing, privacy welfare loss (WTP studies), foregone innovation value from killer acquisitions, and attention-economy mental health costs (VSL-weighted).",
+  cooperative_baseline: "Competitive platform market with mandatory interoperability, data portability, and no preferential self-dealing, generating ~$35B in legitimate platform coordination value.",
+  falsification: ["F1: Demonstrate that platform concentration has reduced search quality or advertising costs for consumers relative to pre-concentration baselines.","F2: Show that killer acquisitions (Instagram, WhatsApp, YouTube) increased rather than suppressed downstream innovation in adjacent markets.","F3: Demonstrate that network effects cannot be overcome by regulatory interoperability mandates, citing a failed natural experiment."],
+  key_sources: ["EU Digital Markets Act enforcement reports (2024)","Stigler Committee on Digital Platforms, Report (2019)","Statista, Global digital advertising market share (2024)","FTC, Study on Social Media and Video Streaming (2024)"]
 };
-
 
 // ─── Color palette ───────────────────────────────────────────────────────────
 const C = {
@@ -336,51 +337,58 @@ export default function PSTBigTechPlatformMonopolyDashboard() {
             </div>
           </div>
         )}
-
         {/* MONTE CARLO TAB */}
         {tab === 'monte-carlo' && (
           <div>
-            <SectionTitle>Monte Carlo Robustness — {MC_PARAMS.n_draws.toLocaleString()} Draws</SectionTitle>
+            <SectionTitle>Monte Carlo Simulation — {MC_STATS.n_draws.toLocaleString()} Draws (seed={MC_STATS.seed})</SectionTitle>
             <div style={{background:C.panel,border:`1px solid ${C.border}`,borderRadius:4,padding:16,marginBottom:16}}>
-              <ResponsiveContainer width="100%" height={280}>
-                <BarChart data={MC_DATA} margin={{top:10,right:30,left:20,bottom:10}}>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={MC_HIST} margin={{top:10,right:30,left:20,bottom:30}}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-                  <XAxis dataKey="bin" stroke={C.muted} tick={{fontFamily:C.mono,fontSize:10}} />
+                  <XAxis dataKey="bin" stroke={C.muted} tick={{fontFamily:C.mono,fontSize:9}} angle={-45} textAnchor="end" interval={4} />
                   <YAxis stroke={C.muted} tick={{fontFamily:C.mono,fontSize:11}} />
-                  <Tooltip contentStyle={{background:C.panel,border:`1px solid ${C.border}`,fontFamily:C.mono,fontSize:12,color:C.text}} />
+                  <Tooltip contentStyle={{background:C.panel,border:`1px solid ${C.border}`,fontFamily:C.mono,fontSize:12,color:C.text}} formatter={(v)=>[v,'Draws']} />
                   <Bar dataKey="count" fill={C.gold} />
-                  <ReferenceLine x={MC_PARAMS.mean.toFixed(1)} stroke={C.crimson} strokeDasharray="5 5" label={{value:'β̄='+MC_PARAMS.mean,fill:C.crimson,fontFamily:C.mono,fontSize:11}} />
+                  <ReferenceLine x={MC_STATS.mean.toFixed(2)} stroke={C.crimson} strokeWidth={2} strokeDasharray="5 5" label={{value:'μ='+MC_STATS.mean.toFixed(2),fill:C.crimson,fontFamily:C.mono,fontSize:11,position:'top'}} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
             <div style={{display:'flex',gap:12,flexWrap:'wrap',marginBottom:16}}>
-              <Metric label="MEAN β_W" value={MC_PARAMS.mean} color={C.gold} />
-              <Metric label="90% CI" value={'['+MC_PARAMS.ci_lo+', '+MC_PARAMS.ci_hi+']'} color={C.muted} />
-              <Metric label="% HOLLOW WIN" value={MC_PARAMS.pct_hw+'%'} color={MC_PARAMS.pct_hw > 90 ? C.crimson : C.gold} />
+              <Metric label="MEAN β_W" value={MC_STATS.mean.toFixed(2)} sub={'Median: '+MC_STATS.median.toFixed(2)} color={C.gold} />
+              <Metric label="90% CI" value={'['+MC_STATS.ci_lo.toFixed(2)+', '+MC_STATS.ci_hi.toFixed(2)+']'} sub={'Range: '+MC_STATS.min.toFixed(2)+'–'+MC_STATS.max.toFixed(2)} color={C.muted} />
+              <Metric label="% HOLLOW WIN" value={MC_STATS.pct_hw.toFixed(1)+'%'} sub={'β_W > 1 in all draws'} color={MC_STATS.pct_hw > 95 ? C.crimson : C.gold} />
+              <Metric label="% β_W > 3" value={MC_STATS.pct_above_3.toFixed(1)+'%'} color={MC_STATS.pct_above_3 > 90 ? C.crimson : C.gold} />
+              <Metric label="% β_W > 5" value={MC_STATS.pct_above_5.toFixed(1)+'%'} color={MC_STATS.pct_above_5 > 50 ? '#D97706' : C.gold} />
             </div>
-            {MC_PARAMS.channels && MC_PARAMS.channels.length > 0 && (
-              <div style={{padding:16,background:C.panel,border:`1px solid ${C.border}`,borderRadius:4}}>
-                <div style={{fontFamily:C.mono,fontSize:12,color:C.gold,marginBottom:8}}>DISTRIBUTION PARAMETERS</div>
-                <table style={{width:'100%',borderCollapse:'collapse',fontFamily:C.mono,fontSize:13}}>
-                  <thead><tr style={{borderBottom:`1px solid ${C.border}`}}>
-                    <th style={{padding:'6px 10px',textAlign:'left',color:C.gold}}>CHANNEL</th>
-                    <th style={{padding:'6px 10px',textAlign:'left',color:C.gold}}>DISTRIBUTION</th>
-                    <th style={{padding:'6px 10px',textAlign:'right',color:C.gold}}>LOW</th>
-                    <th style={{padding:'6px 10px',textAlign:'right',color:C.gold}}>HIGH</th>
-                  </tr></thead>
-                  <tbody>
-                    {MC_PARAMS.channels.map((ch,i) => (
-                      <tr key={i} style={{borderBottom:`1px solid rgba(255,255,255,0.04)`}}>
-                        <td style={{padding:'6px 10px',color:C.text}}>{ch.name}</td>
-                        <td style={{padding:'6px 10px',color:C.muted}}>{ch.dist}</td>
-                        <td style={{padding:'6px 10px',color:C.muted,textAlign:'right'}}>{ch.lo}</td>
-                        <td style={{padding:'6px 10px',color:C.muted,textAlign:'right'}}>{ch.hi}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
+            <SectionTitle>Channel Welfare Contributions</SectionTitle>
+            <table style={{width:'100%',borderCollapse:'collapse',fontFamily:C.mono,fontSize:13}}>
+              <thead><tr style={{borderBottom:`1px solid ${C.border}`}}>
+                <th style={{padding:'8px 12px',textAlign:'left',color:C.gold}}>CHANNEL</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>MEAN $B</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>P5</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>P50</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>P95</th>
+                <th style={{padding:'8px 12px',textAlign:'right',color:C.gold}}>SHARE</th>
+              </tr></thead>
+              <tbody>
+                {MC_CHANNELS.map((ch,i) => (
+                  <tr key={i} style={{borderBottom:`1px solid rgba(255,255,255,0.04)`,background:i%2===0?C.panel:C.bg}}>
+                    <td style={{padding:'8px 12px',color:C.text,fontFamily:C.serif,fontSize:14}}>{ch.name}</td>
+                    <td style={{padding:'8px 12px',color:C.gold,textAlign:'right',fontWeight:600}}>{ch.mean.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{ch.p5.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{ch.p50.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{ch.p95.toFixed(1)}</td>
+                    <td style={{padding:'8px 12px',color:C.muted,textAlign:'right'}}>{(ch.share*100).toFixed(1)}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div style={{marginTop:16,padding:12,background:'rgba(245,158,11,0.06)',border:`1px solid rgba(245,158,11,0.15)`,borderRadius:4}}>
+              <div style={{fontFamily:C.mono,fontSize:11,color:C.muted}}>Total welfare cost: <span style={{color:C.gold}}>${MC_WELFARE.mean.toFixed(1)}B</span> (90% CI: ${MC_WELFARE.ci_lo.toFixed(1)}B – ${MC_WELFARE.ci_hi.toFixed(1)}B) · Source: sapm_monte_carlo.py (seed=42)</div>
+            </div>
+          </div>
+        )}
+
           </div>
         )}
 

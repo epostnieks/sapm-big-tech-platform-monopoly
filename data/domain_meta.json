@@ -1,0 +1,138 @@
+{
+  "key": "sapm-big-tech-platform-monopoly",
+  "meta_fill": {
+    "pi": "$158B",
+    "psa": "-$1.011T",
+    "mu": "0.135",
+    "kappa": "1.22"
+  },
+  "psf": {
+    "pi_c": 35.0,
+    "pi_p": 158.0,
+    "w_c": 1169.0,
+    "kappa": 1.22
+  },
+  "monte_carlo": {
+    "mean": 7.45,
+    "ci_lo": 5.2,
+    "ci_hi": 10.8,
+    "pct_hw": 99.7,
+    "n_draws": 10000,
+    "channels": [
+      {
+        "name": "Monopoly rent extraction",
+        "dist": "triangular",
+        "lo": 280,
+        "hi": 520,
+        "mode": 390
+      },
+      {
+        "name": "Privacy & data exploitation",
+        "dist": "log-normal",
+        "lo": 150,
+        "hi": 380,
+        "mode": 240
+      },
+      {
+        "name": "Innovation suppression",
+        "dist": "triangular",
+        "lo": 120,
+        "hi": 340,
+        "mode": 210
+      },
+      {
+        "name": "Labor market monopsony",
+        "dist": "triangular",
+        "lo": 80,
+        "hi": 220,
+        "mode": 145
+      },
+      {
+        "name": "Attention & mental health",
+        "dist": "log-normal",
+        "lo": 90,
+        "hi": 280,
+        "mode": 170
+      },
+      {
+        "name": "Governance capture",
+        "dist": "uniform",
+        "lo": 30,
+        "hi": 110,
+        "mode": 65
+      }
+    ]
+  },
+  "thresholds": [
+    {
+      "domain": "EU DMA gatekeeper enforcement",
+      "year": 2025,
+      "confidence": "High",
+      "status": "Apple, Google, Meta designated; interoperability mandates active",
+      "crossed": true
+    },
+    {
+      "domain": "U.S. antitrust structural remedy",
+      "year": 2027,
+      "confidence": "Medium",
+      "status": "DOJ Google search remedy proceedings underway",
+      "crossed": false
+    },
+    {
+      "domain": "Platform data portability mandate",
+      "year": 2028,
+      "confidence": "Medium",
+      "status": "EU DMA portability provisions; U.S. lacks federal equivalent",
+      "crossed": false
+    },
+    {
+      "domain": "AI integration lock-in threshold",
+      "year": 2026,
+      "confidence": "High",
+      "status": "GPT-4/Gemini integration into search creating new switching barriers",
+      "crossed": true
+    },
+    {
+      "domain": "Global ad market >70% Big Tech share",
+      "year": 2024,
+      "confidence": "High",
+      "status": "Google+Meta = ~68% of global digital ad spend in 2024",
+      "crossed": true
+    }
+  ],
+  "axioms": {
+    "type": "institutional",
+    "items": [
+      {
+        "id": "I1",
+        "name": "Network effects lock-in",
+        "description": "Platform value grows superlinearly with user base, creating winner-take-most dynamics that prevent competitive entry even when incumbents degrade quality or raise prices."
+      },
+      {
+        "id": "I2",
+        "name": "Data asymmetry moat",
+        "description": "Incumbents' training data advantage for AI and behavioral targeting is self-reinforcing: more users generate more data, improving services, attracting more users."
+      },
+      {
+        "id": "I3",
+        "name": "Regulatory capture through complexity",
+        "description": "Platform governance requires technical expertise that regulators lack; the revolving door between Big Tech and regulatory agencies ensures that substantive enforcement is systematically understaffed."
+      }
+    ]
+  },
+  "methods": {
+    "welfare_function": "W measured as consumer surplus loss from monopoly pricing, privacy welfare loss (WTP studies), foregone innovation value from killer acquisitions, and attention-economy mental health costs (VSL-weighted).",
+    "cooperative_baseline": "Competitive platform market with mandatory interoperability, data portability, and no preferential self-dealing, generating ~$35B in legitimate platform coordination value.",
+    "key_sources": [
+      "EU Digital Markets Act enforcement reports (2024)",
+      "Stigler Committee on Digital Platforms, Report (2019)",
+      "Statista, Global digital advertising market share (2024)",
+      "FTC, Study on Social Media and Video Streaming (2024)"
+    ],
+    "falsification": [
+      "F1: Demonstrate that platform concentration has reduced search quality or advertising costs for consumers relative to pre-concentration baselines.",
+      "F2: Show that killer acquisitions (Instagram, WhatsApp, YouTube) increased rather than suppressed downstream innovation in adjacent markets.",
+      "F3: Demonstrate that network effects cannot be overcome by regulatory interoperability mandates, citing a failed natural experiment."
+    ]
+  }
+}
